@@ -1,0 +1,65 @@
+
+% These lines tell TeXShop to typeset with xelatex, and to open and 
+% save the source with Unicode encoding.
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+\usepackage{geometry} 
+\geometry{a4paper,scale=0.8}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{xeCJK}
+\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{url}
+\usepackage{indentfirst} 
+\usepackage{amsmath}
+
+
+% Will Robertson's fontspec.sty can be used to simplify font choices.
+% To experiment, open /Applications/Font Book to examine the fonts 
+% provided on Mac OS X, and change "Hoefler Text" to any of these choices.
+
+\setCJKmainfont{SimSun}  % 中文默认字体
+\setromanfont[Mapping=tex-text]{Times New Roman} % 英文默认字体
+
+%%其他字体
+\newfontfamily{\song}[Scale=1]{SimSun}				%宋体
+\newfontfamily{\newtime}[Scale=1]{Times New Roman}	%Times New Roman
+\newfontfamily{\hei}[Scale=1]{SimHei}				%黑体
+\newfontfamily{\yahei}[Scale=1]{Microsoft YaHei}		%微软雅黑
+
+%% 首行缩进、段落
+\setlength{\parindent}{2em}
+%\setlength{\lineskip}{1.3em} 		%设置行间距
+%\setlength{\parskip}{0.5em} 		%设置段落间距
+
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont} 	%三号
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}			%四号
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}  		%小四号
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}    		%五号
+
+\title{\textbf{Neural and Cognitive Computation \\
+	{Homework 1}}}
+\author{ {Lu Huang(黄露)~~~~2017210726 }\\
+	Dept. of Electronic Engineering, Tsinghua Univ. \\
+	\url{huanglu.th@gmail.com}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+This is a standard TeX document using Hoefler Text. It uses \LaTeX\ and
+the standard \TeX\ graphic packages.
+
+$$
+a=b+1
+$$
+
+ Here are some multilingual Unicode fonts: this is Arabic text: 
+this is Hebrew: {\H שלום}, and here's some Japanese: {\song 今日中国}.
+
+中华人民共和国。中华人民共和国。中华人民共和国。中华人民共和国。中华人民共和国。中华人民共和国。中华人民共和国。中华人民共和国。中华人民共和国。
+
+\end{document}  
